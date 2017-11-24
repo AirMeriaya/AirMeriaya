@@ -16,7 +16,7 @@ __Spring加载properties可以大致分为两种方式：环境变量，包装�
     </property>
 </bean>
 ```
-这种方式下，我们可以用__${key}__的形式在xml配置文件中或者在字段上使用__@Value__读取properties文件中的内容。
+这种方式下，我们可以用 **${key}** 形式在xml配置文件中或者在字段上使用 **@Value** 读取properties文件中的内容。
 <br>
 ## 二、包装类
 加载方式：
@@ -37,4 +37,4 @@ xsi:schemaLocation="http://www.springframework.org/schema/util http://www.spring
     </property>
 </bean>
 ```
-这种方式下，我们可以用#{prop['key']}读取在xml配置文件中读取properties文件中的内容。
+这种方式下，我们可以用 **#{prop['key']}** 读取在xml配置文件中读取properties文件中的内容。
