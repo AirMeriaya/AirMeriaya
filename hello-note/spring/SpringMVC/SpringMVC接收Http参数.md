@@ -9,10 +9,10 @@
   * Http Body
 
 * **按HttpMethod分**
-  * 可以带有body**（POST, DELETE, UPDATE）**
-  * 不可以带有body**（GET）**
+  * 可以带有body **（POST, DELETE, UPDATE）**
+  * 不可以带有body **（GET）**
 * **按Content-Type分**
-  * application/x-www-form-urlencoded**（default）**
+  * application/x-www-form-urlencoded **（default）**
   * application/json、application/xml
   * multipart/form-data
   * application/octet-stream
