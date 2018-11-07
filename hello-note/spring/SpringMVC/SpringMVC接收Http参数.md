@@ -73,7 +73,9 @@
 | @RequestBody   | 若为x-www-form-urlencoded，则将其视为字符串，反之无效<br/>该注解在参数中有且只有一个 | application/json<br/>application/xml<br/>反序列化为对象      |
 | @RequestPart   | multipart/form-data<br/>提取part，并按@RequestParam匹配      | multipart/form-data<br/>提取part，并按@RequestParam匹配      |
 
-*补充*：`@RequestParam`也可以解析`multipart/form-data`，但需要额外配置`HttpMessageConverter`，有两种方式：
+*补充 1*：`@RequestParam`也可以解析`multipart/form-data`，但需要额外配置`HttpMessageConverter`，有两种方式：
 
 * `StandardServletMultipartResolver` + `Servlet 3.0+`
 * `CommonsMultipartResolver` + `commons-fileupload`
+
+*补充 2*：强烈建议在能指定变量名的注解中指定值。当注解中未指定值时，SpringMVC会根据参数名进行匹配，虽然便捷了开发，但在第一次调用时，SpringMVC必须利用`asm、javassist`等第三方jar包通过分析字节码中本地变量表获取参数名，并缓存到内存中，既降低效率又浪费资源
