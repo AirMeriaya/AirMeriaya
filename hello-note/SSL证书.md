@@ -181,7 +181,7 @@ openssl pkcs12 -in input.pfx -nokeys -out output.cer
 openssl pkcs12 -in input.pfx -nocerts -nodes -out private.key
 ```
 
-**Extract Certification from JKS**、**Extract Private Key from PFX**
+**Extract Certification from JKS**、**Extract Private Key from JKS**
 
 ```
 先转成PFX，之后操作同PFX
